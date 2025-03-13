@@ -57,8 +57,8 @@ export default function Scores({ courseName, courseResult }) {
           </tr>
         </thead>
         <tbody>
-          {courseResult.map((result) => (
-            <tr>
+          {courseResult.map((result, index) => (
+            <tr key={index}>
               <td>{result.firstName}</td>
               <td>{result.lastName}</td>
               <td className={checkScore(result.score) ? "warning" : ""}>
